@@ -1,15 +1,73 @@
-import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-const Button = styled.button``;
+type ButtonProps = {
+  block?: boolean;
+  isLoading?: boolean;
+  selected?: boolean;
+};
 
-interface ButtonProps {
-  label: string;
-  onClick: () => void;
-}
+const Button = styled.button<ButtonProps>`
+  font-family: ${({ theme }) => theme.font.family};
+  font-weight: ${({ theme }) => theme.font.weight.semiBold};
+  font-size: 20px;
+  line-height: 36px;
+  padding: 0 16px;
+  outline: 0;
+  cursor: pointer;
 
-const ButtonComponent: React.FC<ButtonProps> = ({ label, onClick }) => (
-  <Button onClick={onClick}>{label}</Button>
-);
+  border: solid 1px ${({ theme }) => theme.components.button.borderColor};
+  background-color: ${({ theme }) => theme.components.button.backgroundColor};
+  color: ${({ theme }) => theme.components.button.color};
+  border-radius: ${({ theme }) => theme.border.radius};
 
-export default ButtonComponent;
+  &:hover {
+    order: solid 1px ${({ theme }) => theme.components.button.hoverBorderColor};
+    background-color: ${({ theme }) =>
+      theme.components.button.hoverBackgroundColor};
+    color: ${({ theme }) => theme.components.button.hoverColor};
+    border-radius: ${({ theme }) => theme.border.radius};
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  ${({ block }) =>
+    block &&
+    css`
+      display: block;
+      width: 100%;
+    `};
+
+  ${({ theme, isLoading }) =>
+    isLoading &&
+    css`
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border-top: solid 2px ${theme.components.button.color};
+        border-right: solid 2px transparent;
+        animation: spinner 0.7s linear infinite;
+
+        vertical-align: middle;
+        margin-right: 10px;
+        margin-top: -4px;
+      }
+
+      &:hover:before {
+        border-top: solid 2px ${theme.components.button.hoverColor};
+      }
+
+      @keyframes spinner {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    `}
+`;
+
+export default Button;

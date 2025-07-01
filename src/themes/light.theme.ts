@@ -1,15 +1,15 @@
-import { DefaultTheme } from "styled-components";
+import { DefaultTheme } from 'styled-components';
 
-import { borderRadius } from "./tokens/border.token";
-import breakpoint from "./tokens/breakpoint.token";
-import { lightThemeButton } from "./tokens/button.token";
-import color from "./tokens/color.token";
-import { fontFamily, fontWeight, fontSize } from "./tokens/font.token";
-import { lightThemeInput } from "./tokens/input.token";
-import { lightThemeAlert } from "./tokens/alert.token";
+import { borderRadius } from './tokens/border.token';
+import breakpoint from './tokens/breakpoint.token';
+import { lightThemeButton } from './tokens/button.token';
+import color from './tokens/color.token';
+import { fontFamily, fontWeight, fontSize } from './tokens/font.token';
+import { lightThemeInput } from './tokens/input.token';
+import { lightThemeAlert } from './tokens/alert.token';
 
 const lightTheme: DefaultTheme = {
-  theme: "light",
+  theme: 'light',
   color,
 
   font: {

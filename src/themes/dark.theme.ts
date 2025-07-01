@@ -1,15 +1,15 @@
-import { DefaultTheme } from "styled-components";
+import { DefaultTheme } from 'styled-components';
 
-import { borderRadius } from "./tokens/border.token";
-import breakpoint from "./tokens/breakpoint.token";
-import { darkThemeButton } from "./tokens/button.token";
-import color from "./tokens/color.token";
-import { fontFamily, fontWeight, fontSize } from "./tokens/font.token";
-import { darkThemeInput } from "./tokens/input.token";
-import { darkThemeAlert } from "./tokens/alert.token";
+import { borderRadius } from './tokens/border.token';
+import breakpoint from './tokens/breakpoint.token';
+import { darkThemeButton } from './tokens/button.token';
+import color from './tokens/color.token';
+import { fontFamily, fontWeight, fontSize } from './tokens/font.token';
+import { darkThemeInput } from './tokens/input.token';
+import { darkThemeAlert } from './tokens/alert.token';
 
 const darkTheme: DefaultTheme = {
-  theme: "dark",
+  theme: 'dark',
   color,
 
   font: {
@@ -24,7 +24,7 @@ const darkTheme: DefaultTheme = {
 
   border: {
     radius: borderRadius,
-    color: "#333",
+    color: '#333',
   },
 
   breakpoint,
