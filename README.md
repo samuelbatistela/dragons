@@ -50,12 +50,17 @@ src/
 
 ```
 
+✅ Testes
+Os testes são escritos com Jest e React Testing Library.
+
 ```bash
+
 yarn test
 yarn test:coverage
 
 ```
 
-Requisitos para Rodar o Projeto
+✅ Requisitos para Rodar o Projeto
 Node.js >= 18
+
 Yarn >= 1.22
