@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { FC, useState } from 'react';
 import { Formik, Form, Field, FormikHelpers, FormikProps } from 'formik';
-import Link from 'next/link';
 import styled from 'styled-components';
 import EyeIcon from '@/components/icons/EyeIcon.component';
 import EyeHideIcon from '@/components/icons/EyeHideIcon.component';
@@ -13,10 +12,6 @@ import {
 } from '@/components/typography/Typography.component';
 import FormCard from '@/components/card/FormCard.component';
 import SharedButton from '@/components/button/Button.component';
-
-const LinkNext = styled(Link)`
-  text-decoration: none;
-`;
 
 const Wrapper = styled(FormCard)`
   width: 100%;
@@ -116,10 +111,7 @@ const SigninForm: FC<SigninFormProps> = ({ isLoading, onSubmit }) => {
               Acessar
             </Button>
             <SignupParagraph>
-              Ainda não tem conta?{' '}
-              <LinkNext href="/signup">
-                <SignupLink>Cadastre-se</SignupLink>
-              </LinkNext>
+              Ainda não tem conta? <SignupLink>Cadastre-se</SignupLink>
             </SignupParagraph>
           </Form>
         )}
