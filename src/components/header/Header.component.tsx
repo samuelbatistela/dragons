@@ -124,8 +124,8 @@ const Header: FC<HeaderProps> = ({ toggleSideMenu, menuActive }) => {
               <MenuIcon />
             </ExpandButton>
             <WrapperTitle>
-              <Subtitle>Visitantes</Subtitle>
-              <Title>Stark Towers</Title>
+              <Subtitle>Teste técnico</Subtitle>
+              <Title>Dragons</Title>
             </WrapperTitle>
             <Separator />
           </HeaderMenu>

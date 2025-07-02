@@ -16,15 +16,11 @@ interface MenuItemData {
 const menuData: MenuItemData[] = [
   {
     title: 'Dragões',
-    path: '/lista-dragoes',
+    path: '/dragons',
   },
   {
     title: 'Cadastrar Dragão',
-    path: '/cadastrar-dragao',
-  },
-  {
-    title: 'Detalhes do Dragão',
-    path: '/detalhes-dragao',
+    path: '/dragon',
   },
 ];
 
